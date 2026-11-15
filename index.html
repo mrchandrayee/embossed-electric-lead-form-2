@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080c13">
+  <title>Embossed Electric Lead Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <h1 class="page-title">Embossed Electric Lead Form</h1>
+
+    <section class="lead-form" aria-labelledby="formTitle">
+      <header class="form-header">
+        <h2 id="formTitle">Get In Touch</h2>
+        <p>Tell us about your requirement</p>
+      </header>
+
+      <form id="enquiryForm" novalidate>
+        <label class="sr-only" for="fullName">Full Name</label>
+        <input id="fullName" name="fullName" type="text" placeholder="Full Name" autocomplete="name" required>
+
+        <label class="sr-only" for="email">Email Address</label>
+        <input id="email" name="email" type="email" placeholder="Email Address" autocomplete="email" required>
+
+        <label class="sr-only" for="mobile">Mobile Number</label>
+        <input id="mobile" name="mobile" type="tel" placeholder="Mobile Number" autocomplete="tel" inputmode="tel" required>
+
+        <label class="sr-only" for="service">Select service</label>
+        <div class="select-wrap">
+          <select id="service" name="service" required>
+            <option value="" disabled selected>Select Requirement</option>
+            <option>UI/UX Design</option>
+            <option>Web Development</option>
+            <option>Branding</option>
+            <option>Social Media Marketing</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <label class="sr-only" for="requirement">Your Requirement</label>
+        <textarea id="requirement" name="requirement" placeholder="Your Requirement" rows="4" required></textarea>
+
+        <button class="submit-button" id="submitButton" type="submit">
+          <span class="button-text">SUBMIT ENQUIRY</span>
+          <span class="button-loader" aria-hidden="true"></span>
+        </button>
+        <p class="form-message" id="formMessage" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <div class="comment-label">Comment "Lead" for code</div>
+
+    <section class="code-panel">
+      <div class="code-heading">
+        <div><span class="eyebrow">CSS SOURCE</span><h2>Embossed form surface</h2></div>
+        <button type="button" id="copyCss">Copy CSS</button>
+      </div>
+      <pre><code id="cssSnippet">.lead-form {
+  position: relative;
+  z-index: 2;
+  padding: 38px;
+  border-radius: 22px;
+  background: linear-gradient(145deg, #171d28, #0c1018);
+  /* Embossed effect */
+  box-shadow:
+    inset 5px 5px 12px rgba(0, 0, 0, .8),
+    inset -5px -5px 12px rgba(255, 255, 255, .035),
+    0 20px 50px rgba(0, 0, 0, .6);
+}</code></pre>
+    </section>
+
+    <footer>HTML · CSS · JavaScript · No dependencies</footer>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
